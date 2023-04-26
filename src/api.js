@@ -1,9 +1,9 @@
-const API_KEY = '';
+const API_KEY = 'w19C22gdpjxxF9oJz9n7zuTRSmloBKrJfcQKRlNR';
 
 
 export default {
-    api: (msg) => {
-        fetch('https://api.cohere.ai/v1/generate', {
+    async api(msg) {
+        let chat = await fetch('https://api.cohere.ai/v1/generate', {
             method: 'POST',
             headers: {
                 'Authorization': 'BEARER ' + API_KEY,
@@ -20,9 +20,9 @@ export default {
                 "return_likelihoods": "NONE"
             })
         })
-            .then(response => response.json())
-            .then(data => alert(data.generations[0].text))
-            .catch(error => console.error(error))
+
+        const response = await chat.json()
+        return await response
 
     }
 }
