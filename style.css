@@ -33,8 +33,8 @@ body {
 
 .respuesta {
   background-color: bisque;
-  height: 600px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   margin: 2rem;
   text-align: justify;
   padding: 2rem;
@@ -72,7 +72,6 @@ select {
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    flex-direction: column;
   }
   
 
