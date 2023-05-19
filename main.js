@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             respuesta[1].innerHTML = ''
             let doc = new DOMParser().parseFromString(e.data, "text/html");
             respuesta[0].appendChild(...doc.body.children);
-            respuesta[1].innerHTML = e.data
+            respuesta[1].innerHTML = `<xmp>${e.data}</xmp>`
         })
         /* console.log(await api.api(data.pregunta.generations[0].text))  */
     }
